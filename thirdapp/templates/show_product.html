@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+  
+{% endblock %}
+
+{% block content %}
+<p class ="display-4">{{products.0.category}}</p>
+<div class ="d-flex">
+{% for product in products %}
+<div class="card text-white bg-secondary mb-3 m-4" style="max-width: 20rem;">
+    <div class="card-header" style="font-weight: bolder;">{{product.name}}--{{product.user}}</div>
+    <div class="card-body">
+      <img style ="width:250px;"src="{{product.image.url}}" alt="">
+      <h4 class="card-title">{{product.price}}</h4>
+      <p class="card-text">{{product.description}}</p>
+      <a href="{% url 'edit_product' product.id %}" class ="btn btn-danger">EDIT</a>
+      <a href="{% url 'delete' product.id %}" class="btn btn-success">DELETE</a>
+    </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

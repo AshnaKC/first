@@ -17,6 +17,7 @@
       <p class="card-text">{{product.description}}</p>
       <a href="{% url 'edit_product' product.id %}" class ="btn btn-danger"></a>
       <a href="{% url 'delete' product.id %}" class="btn btn-secondary">DELETE</a>
+     
     </div>
     </div>
 {% endfor %}

@@ -15,8 +15,8 @@
       <img style ="width:250px;"src="{{product.image.url}}" alt="">
       <h4 class="card-title">{{product.price}}</h4>
       <p class="card-text">{{product.description}}</p>
-      <a href="{% url 'edit_product' product.id %}" class ="btn btn-danger">EDIT</a>
-      <a href="{% url 'delete' product.id %}" class="btn btn-success">DELETE</a>
+      <a href="{% url 'edit_product' product.id %}" class ="btn btn-danger"></a>
+      <a href="{% url 'delete' product.id %}" class="btn btn-secondary">DELETE</a>
     </div>
     </div>
 {% endfor %}
